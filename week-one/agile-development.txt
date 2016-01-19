@@ -79,12 +79,18 @@ referencing my copy of the repository as the upstream rep by running
 4. Copy below the output from `git remote -v` from within your copy of this
 repository:
 
+origin	git@github.com:ArturHawkwing1/itmd362-pp.git (fetch)
+origin	git@github.com:ArturHawkwing1/itmd362-pp.git (push)
+
 
 Next, you need to install Node.js, and possibly also npm, if you don’t have it
 already.
 
 5. Copy below the output from `node -v`:
 
+v0.10.36
 
 6. Copy below all of the output from `npm install http-server -g`:
+
+
 
