@@ -59,6 +59,8 @@ git version 1.8.3.1
 
 2. Copy below the output from `git config --global --list`:
 
+user.name=Artur Hawkwing
+user.email=Arturhawkwing1@gmail.com
 
 You also need to set up your public/private keypair with GitHub. Once you’ve
 done that, do the following:
