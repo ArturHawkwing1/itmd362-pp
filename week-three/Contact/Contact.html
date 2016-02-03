@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+<!--This HTML page was made by Dean Nelson-->
+	<head>
+		<meta charset="utf-8">
+		<title>Secured by Fire Computer Consulting</title>
+		<!--Link to Jquery librarys for slideshow-->
+		<script type="text/javascript" src="../Slideshow/jquery-1.2.6.min.js"></script>
+		<script src="../Slideshow/Slidshow.js"></script>
+		<script src="FormSelecter.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				setInterval( "slideSwitch()", 5000 );
+			});
+		</script>
+		
+		<!--Link to CSS style sheet.-->
+		<link rel="stylesheet"
+			  type="text/css"
+			  href="../SecuredByFire.css"/>
+		<!--Contact page special CSS-->
+		<link rel="stylesheet"
+			  type="text/css"
+			  href="Contact.css"/>
+	</head>
+	<body>
+		<div id="head">
+			<!--Image used under 17 U.S.C. ยง 107 Fair use
+			Link to home page-->
+			<a href="../Index.html">
+				<img src="../SecuredByFire.png"
+					 id="Logo"
+					 alt="Secured By Fire Logo"
+					 height="100"
+					 width ="100">
+			</a>
+			
+			<a href="Index.html">
+				<h1>Secured By Fire Computer Consulting</h1>
+			</a>
+		</div>
+		<!--Navigation-->
+		<div id="LeftColumn">
+			<div id="menu">
+				<li><a href="../Index.html">Home</a></li>
+				<li><a href="../Location/Location.html">Location</a></li>
+				<li><a href="../Testimonials/Testimonials.html">Testimonials</a></li>
+				<li><a href="../Contact/Contact.html">Contact Us</a></li>
+			</div>
+		</div>
+		<!--Meat of the webpage-->
+		<div id="CenterColumn">
+			<form action="ContactUs.php">
+				<fieldset>
+					<legend>Customer's Contact Infomation</legend>
+					<p>
+						<label>First Name: </label>
+						<input type="text"
+							   name="FirstName"
+							   size="35"
+							   maxlength="35">
+					</p>
+					<p><label>Last Name: </label>
+						<input type="text"
+							   name="LastName"
+							   size="35"
+							   maxlength="35"></p>
+					<p>
+						<label>Phone Number: </label>
+						<input type="text"
+							   name="PhoneNumber"
+							   size="30"
+							   maxlength="10">
+					</p>
+					<p>
+						<label>Email: </label>
+						<input type="text"
+							   name="Email"
+							   size="39"
+							   maxlength="35">
+					</p>
+				</fieldset>
+				
+				<fieldset>
+					<legend>Problem</legend>
+					<!--Select reason for concating Secured By Fire-->
+					<label>Select Reason for Contacting us</label>
+					<p>
+						<select name="Reason"
+								onchange="OnChange(this.value)"
+								id="ReasonDrop">
+							<option value="Select">Select From pull down</option>
+							<option value="Computer_Tune_Up">Computer Tune Up</option>
+							<option value="Computer_Repair">Computer Repair</option>
+							<option value="Computer_Consulting">Computer Consulting</option>
+							<option value="Network_Setup">Network Setup</option>
+							<option value="Network_Maintance">Network Maintance</option>
+							<option value="Network_Consulting">Network Consulting</option>
+						</select>
+					</p>
+					<!--List the people allowed to pick up the computer-->
+					<div id="PickupPerson">
+						<p>First and last names of those allowed to pick up computer.  They will need to show valid identification.</p>
+						<p>
+							<label>Primary: </label>
+							<input type="text"
+								   name="Primary_Pickup"
+								   size="37"
+								   maxlength="35"
+						</p>
+						<p>
+							<label>Backup #1: </label>
+							<input type="text"
+								   name="Backup1_Pickup"
+								   size="35"
+								   maxlength="35"
+						</p>
+						<p>
+							<label>Backup #2: </label>
+							<input type="text"
+								   name="Backup2_Pickup"
+								   size="35"
+								   maxlength="35"
+						</p>
+						<p>
+							<label>Backup #3: </label>
+							<input type="text"
+								   name="Backup3_Pickup"
+								   size="35"
+								   maxlength="35"
+						</p>
+					</div>
+					<div id="Availability">
+						<p>What is your availability? Check all that apply.</p>
+						<!--Check boxes for the Custemer's availability-->
+						<!--Check box for Sunday-->
+						<p>
+							<input type="checkbox" 
+								   name="available_field[]" 
+								   value="Sunday"/>Sunday
+						</p>
+						<!--Check box for Monday-->
+						<p>
+							<input type="checkbox" 
+								   name="available_field[]" 
+								   value="Monday"/>Monday
+						</p>
+						<!--Check box for Tuesday-->
+						<p>
+							<input type="checkbox" 
+								   name="available_field[]" 
+								   value="Tuesday"/>Tuesday
+						</p>
+						<!--Check box for Wednesday-->
+						<p>
+						<input type="checkbox" 
+								   name="available_field[]" 
+								   value="Wednesday"/>Wednesday
+						</p>
+						<!--Check box for Thursday-->
+						<p>
+							<input type="checkbox" 
+								   name="available_field[]" 
+								   value="Thursday"/>Thursday
+						</p>
+						<!--Check box for Friday-->
+						<p>
+							<input type="checkbox"
+								   name="available_field[]" 
+								   value="Friday"/>Friday
+						</p>
+						<!--Check box for Saturday-->
+						<p>
+							<input type="checkbox"
+								   name="available_field[]" 
+								   value="Saturday"/>Saturday
+						</p>
+					</div>
+					<div id="Comments">
+						<!--Custemer describes the issue-->
+						<p>Please describe the problem.</p>
+						<p>
+							<textarea name = "Comments"
+									  rows = "8"
+									  cols = "60"></textarea>
+						</p>
+					</div>
+					<div id="Consulting">
+						<!--Custemer explains what they need advice on-->
+						<p>Please describe the issue you would like advice on.</p>
+						<p>
+							<textarea name = "Comments"
+									  rows = "8"
+									  cols = "60"></textarea>
+						</p>
+					</div>
+				</fieldset>
+				<!--submit and reset buttons-->
+				<input type="submit"
+					   value="Submit"/>
+				<!--Reset button-->
+				<input type="reset"/>
+			</form>
+		</div>
+		<!--Photos taken by Dean Nelson-->
+		<div id="slideshow">
+			<img src="../Slideshow/image1.jpg" alt="Slideshow Image 1" class="active" />
+			<img src="../Slideshow/image2.jpg" alt="Slideshow Image 2" />
+			<img src="../Slideshow/image3.jpg" alt="Slideshow Image 3" />
+		</div>
+		<div id="Footer">
+			<p>SecuredByFire.com is registered and owned by Dean Nelson.</p>
+		</div>
+	</body>
+</html>

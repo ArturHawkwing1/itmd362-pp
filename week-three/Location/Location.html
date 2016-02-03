@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<!--This HTML page was made by Dean Nelson-->
+	<head>
+		<meta charset="utf-8">
+		<title>Secured by Fire Computer Consulting</title>
+		<!--Link to Jquery librarys for slideshow-->
+		<script type="text/javascript" src="../Slideshow/jquery-1.2.6.min.js"></script>
+		<script src="../Slideshow/Slidshow.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				setInterval( "slideSwitch()", 5000 );
+			});
+		</script>
+		
+		<!--Link to CSS style sheet.-->
+		<link rel="stylesheet"
+			  type="text/css"
+			  href="../SecuredByFire.css"/>
+	</head>
+	<body>
+		<div id="head">
+			<!--Image used under 17 U.S.C. ยง 107 Fair use
+			Link to home page-->
+			<a href="../Index.html">
+				<img src="../SecuredByFire.png"
+					 id="Logo"
+					 alt="Secured By Fire Logo"
+					 height="100"
+					 width ="100">
+			</a>
+			<a href="Index.html">
+				<h1>Secured By Fire Computer Consulting</h1>
+			</a>
+		</div>
+		<!--Navigation-->
+		<div id="LeftColumn">
+			<div id="menu">
+				<li><a href="../Index.html">Home</a></li>
+				<li><a href="../Location/Location.html">Location</a></li>
+				<li><a href="../Testimonials/Testimonials.html">Testimonials</a></li>
+				<li><a href="../Contact/Contact.html">Contact Us</a></li>
+			</div>
+		</div>
+		<!--Meat of the webpage-->
+		<div id="CenterColumn">
+			<!--Scripts taken and modified from: https://developers.google.com/maps/documentation/javascript/tutorial. Taken and used under the Creative Commons Attribution 3.0 License.-->
+			<div id="panel">
+				<!--Directions to our location from different directions-->
+				<div id="Selector"
+					<p>
+						<b>Coming from: </b>
+					</p>
+					<!--Drop down menu to pick where the customer is coming from.-->
+					<p>
+						<select id="start">
+							<option value="1131 N La Grange Rd, La Grange Park, IL 60526">South on La Grange Road</option>
+							<option value="Tri-State Tollway, Oak Brook, IL 60523">South on I294</option>
+							<option value="600-666 W Ogden Ave, Hinsadale, IL 60521">East on Ogden Ave</option>
+							<option value="15W250 Plainfield Rd, Burr Ridge, IL 60527">East on Planfield Road</option>
+							<option value="6915 Wolf Rd, Indian Head Park, IL 60525">North on Wolf Road</option>
+							<option value="6395-6635 S La Grange Rd, Hodgkins, IL 60525">North on La Grange Road</option>
+							<option value="8836-8976 W 55th St, McCook, IL 60525">West on 55th Street</option>
+							<option value="7812 Ogden Ave, Lyons, IL 60534">West on Ogden Ave</option>
+						</select>
+					</p>
+					<p>
+						<b>To:  Secured By Fire Computer Consulting</b>
+					</p>
+					<p>
+						<select id="end">
+							<option value="202 45th Street Western Springs, IL, 60558">SecuredByFire Computer Consulting</option>
+						</select>
+					</p>
+				</div>
+					<div id="map">
+				</div>
+				
+				&nbsp;
+				<div id="warnings_panel" style="width:100%;height:10%;text-align:center">
+				</div>
+				<!--Javascript to control the Google Maps API-->
+				<script src="Map.js"></script>
+				<script src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap" async defer></script>
+			</div>
+		</div>
+		<!--Photos taken by Dean Nelson-->
+		<div id="slideshow">
+			<img src="../Slideshow/image1.jpg" alt="Slideshow Image 1" class="active" />
+			<img src="../Slideshow/image2.jpg" alt="Slideshow Image 2" />
+			<img src="../Slideshow/image3.jpg" alt="Slideshow Image 3" />
+		</div>
+		
+		<div id="Footer">
+			<div id="Footer">
+			<p>SecuredByFire.com is registered and owned by Dean Nelson.</p>
+		</div>
+		</div>
+	</body>
+</html>
