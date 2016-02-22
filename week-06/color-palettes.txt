@@ -18,7 +18,7 @@ Fine-grained, atomic commits to your Production Problems repository that include
 Attached are public links to the color palettes requested.
 
 Filename: http://adobe.ly/20PebEJ
-Explanation of your color choices: 
+Explanation of your color choices: Custom Laptops are all about speed so I decided to go with a yellow or red approch.  I then went to Razor's website, saw they used yellow, and from there made a yellow palette.
 
 * A shaded color palette for a website that sells natural and organic foods.
 
