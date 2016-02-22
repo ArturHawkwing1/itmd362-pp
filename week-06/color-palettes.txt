@@ -28,7 +28,7 @@ Explanation of your color choices: Since we're going natural organic foods I cou
 * A complementary palette for a banking website.
 
 Filename:http://adobe.ly/1oCTiRr
-Explanation of your color choices:
+Explanation of your color choices: I did a little diging and while yellow/gold is the color of wealth, most banking websites are primarily shades of blue to try and calm peaple and help them feel at ease when the manage their money.  Due to this I chose a color palette that is 3 blue and 2 yellow/gold.
 
 * A triadic palette for a website that offers games for children.
 
