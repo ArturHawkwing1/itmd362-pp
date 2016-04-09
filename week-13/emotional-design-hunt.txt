@@ -14,11 +14,11 @@ B. Emotional design levels of your object:
 
 * Visceral: Useable and gets the job done.
 
-* Behavioral: 
+* Behavioral: It gets the job done, although it's not dependable enough that I'll won't always be ready for it to break.
 
-* Reflective: 
+* Reflective: I've had to break before and I live with the break and I'm always ready for it to compleatly break and that I'll need to get a new one.
 
-C.  Emotional design qualities of the object that might be useful for Project 3/MyIIT redesign:
+C.  
 
 1.
 2.
