@@ -22,4 +22,4 @@ C.  Emotional design qualities of the object that might be useful for Project 3/
 
 1.Black is almost always an ok color to pick for design.
 2.When one part of the object (website) breaks it causes distrust for the entire website.
-3. 
+3. Funtionality goes before athestetics but athestetics can't be ignored.
