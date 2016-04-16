@@ -20,12 +20,7 @@ B. Emotional design levels of your object:
 
 C.  Emotional design qualities of the object that might be useful for Project 3/MyIIT redesign:
 
-<<<<<<< HEAD
 1.Black is almost always an ok color to pick for design.
 2.When one part of the object (website) breaks it causes distrust for the entire website.
 3. Funtionality goes before athestetics but athestetics can't be ignored.
-=======
-1.
-2.
-3.
->>>>>>> 8d37e56560005358ee63120bad2406a3fec91dd1
+
