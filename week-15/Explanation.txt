@@ -1,1 +1,3 @@
 The redacted stats for agents Vouches and V-Points are for everyone accross the entire site. (Redacted so BRRN doesn't know the popularity, or lack thereof, of Project V)
+
+While interesting as a novelty info, it's not actually that usefull to anyone outside of the Ingress resistance, due to this my B site would have this window MUCH closer to the bottom of the website instead of quicklinks, which is what everyone goes right to when they go to the site.
