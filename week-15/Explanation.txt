@@ -1,3 +1,5 @@
 The redacted stats for agents Vouches and V-Points are for everyone accross the entire site. (Redacted so BRRN doesn't know the popularity, or lack thereof, of Project V)
 
 While interesting as a novelty info, it's not actually that usefull to anyone outside of the Ingress resistance, due to this my B site would have this window MUCH closer to the bottom of the website instead of quicklinks, which is what everyone goes right to when they go to the site.
+
+Project-V is compleatly unuseable if the client computer is not running javascript(see attached photo) and I was unable to figure out which script it was that called the varius boxes.  Once that is figured out, it would be a simple matter of rearanging the scripts into the correct order so that the global stats are at the bottom.
