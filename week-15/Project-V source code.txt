@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html ng-app="projectv">
+    <head>
+        <base href="/">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title ng-bind="viewTitle ? viewTitle + ' - Project V' : 'Project V'">Project V</title>
+
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+              integrity="sha384-yNuQMX46Gcak2eQsUzmBYgJ3eBeWYNKhnjyiBqLd1vvtE9kuMtgw6bjwN8J0JauQ" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+              integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/leaflet/0.7.3/leaflet.css"
+              integrity="sha384-gnyrAoIOt/4fOO7ZS4MVNUkQl0QlEdzA6z3r/GGT4VO6x+EX/iHjeTsq1jGYVgaB" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css"
+              integrity="sha384-t17w2haSDwLp3KSAOHF7+VI9q2maRMLDhnIyU/JasjeWyxcN3YOcrD7T95CiJSWE" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="components/esri-leaflet/esri-leaflet-geocoder.css">
+        <link href="/css/theme.css" rel="stylesheet" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"
+                integrity="sha384-Pn+PczAsODRZ2PiGg0IheRROpP7lXO1NTIjiPo6cca8TliBvaeil42fobhzvZd74" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+                integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/leaflet/0.7.3/leaflet.js"
+                integrity="sha384-OwkG1ddhlN4ChE+0vlO7y52u9a/mf7hrFlcBKaAdi3oPV/8Pyf3MSdSdJ9JZjsyd" crossorigin="anonymous"></script>
+        <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"
+                integrity="sha384-btJhAWztz7ttA6ibFC5ppM39nkCPK6CWzRVmsaLcDn37mA3x1TzF1DbFwa6tJpTN" crossorigin="anonymous"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+        <script src="/components/angular/angular.min.js" type="text/javascript"></script>
+        <script src="/components/angularjs-viewhead/angularjs-viewhead.js" type="text/javascript"></script>
+        <script src="/components/angular-route/angular-route.min.js" type="text/javascript" ></script>
+        <script src="/components/leaflet-heat/leaflet-heat.js" type="text/javascript"></script>
+        <script src="/components/esri-leaflet/esri-leaflet.js" type="text/javascript"></script>
+        <script src="/components/esri-leaflet/esri-leaflet-geocoder.js" type="text/javascript"></script>
+                <script src="/js/368a5ef.js" type="text/javascript"></script>
+                        <script src="/js/47bf999.js" type="text/javascript"></script>
+            </head>
+    <body ng-controller="RootController as root"
+          ng-init="root.init({&quot;agent&quot;:&quot;ArturTheHawk&quot;,&quot;enlid&quot;:&quot;e83eaefd100c7103895a3bad1551919d82cbe736&quot;,&quot;image&quot;:&quot;https:\/\/lh4.googleusercontent.com\/-nISc1Z7elr8\/AAAAAAAAAAI\/AAAAAAAAAFs\/-peM5_xdVjE\/photo.jpg&quot;,&quot;roles&quot;:[&quot;ROLE_TL0&quot;,&quot;ROLE_VERIFIED&quot;,&quot;ROLE_TL1&quot;,&quot;ROLE_TL2&quot;]})">
+
+        <div class="alert alert-warning ng-cloak" role="alert" ng-show="vouchesInHistory">
+            You have old vouches which are currently on hold. Please take a minute and <a href="/restorevouches">decide</a> if you want to keep them.        </div>
+        <div class="alert alert-warning ng-cloak" role="alert" ng-show="needTGId">
+            You have a telegram name in your profile but the telegram account is not linked to V please take a minute and <a href="/verify/tg">link</a> your telegram account.        </div>
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <img src="/images/logo.png" /> Project V
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                                                <li><a href="/search"><span class="glyphicon glyphicon-search"></span> Search Agents</a></li>
+                                                                                                <li><a href="/readme"><span class="glyphicon glyphicon-flag"></span> README (And Changelog)</a></li>
+                        <li><a href="/stats"><span class="glyphicon glyphicon-stats"></span> Statistics</a></li>
+                                            </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{user.agent}} <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/profile/e83eaefd100c7103895a3bad1551919d82cbe736">My Profile</a></li>
+                                <li><a href="/teams">My Teams</a></li>
+                                <li><a href="/circles">My G+ Circles</a></li>
+                                <li><a href="/profile/edit">Edit Profile</a></li>
+                                <li><a href="/settings">Settings</a></li>
+                                <li><a href="/apikey">API</a></li>
+                                <li><a href="/oauth/clients">OAuth2 Clients</a></li>
+                                <li><a href="/logout" target="_self">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container" role="main">
+            <div>
+                <div ng-view autoscroll="true" id="bodyView"></div>
+            </div>
+
+            <hr/>
+            <p>Ingress Fan-site. Not officially affiliated with Ingress or Niantic Labs! Imprint / Impressum: <a href="https://plus.google.com/u/0/+ChristophPuppe/posts">Christoph Puppe, Berlin</a>, <a href="mailto:support@v.enl.one">Support</a></p>
+        </div>
+
+        <script>
+            (function () {
+                var dropdownMenu;
+                $(window).on('show.bs.dropdown', function (e) {
+                    if ($(e.target).parent().hasClass('nav'))
+                        return;
+                    dropdownMenu = $(e.target).find('.dropdown-menu');
+                    $('#bodyView').append(dropdownMenu.detach());
+                    var eOffset = $(e.target).offset();
+                    var left = eOffset.left;
+                    if ($(dropdownMenu).hasClass('align-right'))
+                        left = left - ($(dropdownMenu).outerWidth() - $(e.target).outerWidth());
+                    dropdownMenu.css({
+                        'display': 'block',
+                            'top': eOffset.top + $(e.target).outerHeight(),
+                            'left': left
+                    });
+                    $(e.target).one('hide.bs.dropdown', function (e) {
+                        $(e.target).append(dropdownMenu.detach());
+                        dropdownMenu.hide();
+                    });
+                });
+            })();
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65595667-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    </body>
+</html>
